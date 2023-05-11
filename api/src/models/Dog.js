@@ -31,10 +31,6 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false
   },
-    averageWeight: {
-      type: DataTypes.STRING,
-      allowNull: true,
-  },
     life_span:{
       type: DataTypes.STRING,
       allowNull: true,

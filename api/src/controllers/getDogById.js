@@ -1,6 +1,5 @@
 const axios = require('axios')
 const { Dog } = require('../db')
-//const filterDogsData = require('./apiDataFilter')
 const { API_KEY, URL } = process.env;
 
 const getDogById = async (id, source) =>{
