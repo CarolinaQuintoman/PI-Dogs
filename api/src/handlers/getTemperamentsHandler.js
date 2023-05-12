@@ -9,6 +9,6 @@ const getTemperamentsHandler = async( req, res) =>{
     } catch (error) {
         res.status(404).json({ error: error.message})
     }
-    res.send("temperaments")
+    
 }
 module.exports = getTemperamentsHandler;

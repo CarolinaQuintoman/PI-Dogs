@@ -9,6 +9,7 @@ const cleanData = (array) =>
             weight: `Min: ${weightMin}kg Max: ${weightMax}Kg`,
             height: `Min: ${heightMin}cm Max: ${heightMax}cm`,
             life_span: dog.life_span,
+            
             //created: false,
         }
     });
