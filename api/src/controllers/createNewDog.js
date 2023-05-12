@@ -13,7 +13,7 @@ const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, wei
         weightMin,
         weightMax,
         life_span,
-        
+    
     });
     
     let temp = await Temperament.findAll({ where: { name: temperaments}})

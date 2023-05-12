@@ -38,6 +38,10 @@ module.exports = (sequelize) => {
     life_span:{
       type: DataTypes.STRING,
       allowNull: true,
+  },
+  created: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true,
   }
   }, {timestamps: false, freezeTableName: true });
 };
