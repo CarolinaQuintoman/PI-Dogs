@@ -1,15 +1,13 @@
-const { getAllDogs } = require('../controllers/getAllDogs');
-const { searchDogByName } = require('../controllers/searchDogByName');
+const  getAllDogs  = require('../controllers/getAllDogs');
+const  searchDogByName  = require('../controllers/searchDogByName');
 
-
-const letrasRegex = /^[A-Za-z]+$/;
 
 const getDogsHandler = async( req, res) =>{
     const { name } = req.query;
     try {
-        const results = (name && /^[A-Za-z]+$/.test(name)) 
+        const results = (name && /^[A-Za-z\s]+$/.test(name)) 
         ? await searchDogByName(name) 
-        : await getAllDogs()
+        : await getAllDogs();
     
         res.status(200).json(results);
         

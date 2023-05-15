@@ -24,4 +24,4 @@ const getAllTemperaments = async () =>{
     return oneTemperament;
 
 }
-module.exports = { getAllTemperaments };
+module.exports =  getAllTemperaments ;

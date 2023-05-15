@@ -1,4 +1,4 @@
-const { createNewDog } = require('../controllers/createNewDog')
+const  createNewDog  = require('../controllers/createNewDog')
 
 const createDogHandler = async( req, res) =>{
    try {

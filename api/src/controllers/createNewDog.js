@@ -1,6 +1,6 @@
 const { Dog, Temperament } = require('../db');
-const { getAllTemperaments } = require('./getAllTemperaments');
-const { Op } = require('sequelize');
+// const { getAllTemperaments } = require('./getAllTemperaments');
+// const { Op } = require('sequelize');
 
 const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, weightMax, life_span, temperaments) =>{
     
@@ -21,4 +21,4 @@ const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, wei
 
     return newDog
 }
-module.exports = { createNewDog }
+module.exports =  createNewDog 

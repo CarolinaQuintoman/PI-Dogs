@@ -13,18 +13,6 @@ const cleanData = (array) =>
         }
     });
 
-    const cleanDataTemperaments = (array) =>{
-        const data = array.map( (dog) => {
-            return { temperaments: dog.temperaments}
-        });
-        return data
-        .map(obj => obj.temperament)
-        .filter(temperaments => temperaments !== null)
-        .map(temperaments => temperaments.split(", "))
-        .flat()
-        .map((temperament) => ({name: temperament.trim()}))
-        .filter((temperament, index, self) => index === self.findIndex((t) => t.name === temperament.name))
-    }
+    
 
-
-module.exports = { cleanData, cleanDataTemperaments};
+module.exports = cleanData;

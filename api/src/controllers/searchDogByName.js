@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { Dog } = require('../db');
-const { cleanData } = require('../controllers/cleanData');
+const  cleanData  = require('../controllers/cleanData');
 const { URL, API_KEY } = process.env;
 
 const searchDogByName = async (name) =>{
@@ -14,4 +14,4 @@ const searchDogByName = async (name) =>{
     return [...filteredApi, ...databaseDogs]
 }
 
-module.exports = { searchDogByName };
+module.exports =  searchDogByName ;

@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 1200px;
+    height: 620px;
+    object-fit: cover;
+    margin: 15px;
+    
+}
+/* button{
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    margin: 10px 50px 0 50px;
+    font-size: large;
+    font-family: 'Garamond';
+    color: rgb(245, 199, 142);
+    text-transform: uppercase;
+    margin: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease-in-out;
+} */
+/* .btn{
+    background-color: rgb(203, 218, 228);
+    box-shadow: 0 0 5px rgb(210, 210, 224),
+                0 0 25px rgb(203, 203, 214),
+                0 0 50px rgb(205, 205, 219);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+} */
+/* .nav{
+    background-color: rgb(210, 217, 221);
+    text-decoration: none;
+    color: rgb(167, 128, 81);
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease-in-out;
+} */
+/* .text1{
+    color:  rgb(121, 86, 43);
+    font-family: "Latin Modern Roman";
+    font-style: italic;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: yellow;
+    white-space: pre-line;
+    padding: 10px 50px 30px 50px;
+    margin: 5px 5px;
+    
+
+} */
+
+/* .text2{
+    color:  rgb(126, 90, 46);
+} */
+/* h1{
+    font-size: 36px;
+  color:rgb(126, 90, 46);
+  text-shadow: 0px 1px 0px #ccc,
+               0px 2px 0px #c9c9c9,
+                0px 3px 0px #bbb,
+                0px 4px 0px #b9b9b9,
+                0px 5px 0px #aaa,
+                0px 6px 1px rgba(0,0,0,.1),
+                0px 0px 5px rgba(0,0,0,.1),
+                0px 1px 3px rgba(0,0,0,.3),
+                0px 3px 5px rgba(0,0,0,.2),
+                0px 5px 10px rgba(0,0,0,.25),
+                0px 10px 10px rgba(0,0,0,.2),
+                0px 20px 20px rgba(0,0,0,.15);
+} */

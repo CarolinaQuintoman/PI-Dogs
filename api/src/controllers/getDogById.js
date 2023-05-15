@@ -12,4 +12,4 @@ const getDogById = async (id, source) =>{
     
 
 }
-module.exports={ getDogById };
+module.exports= getDogById ;

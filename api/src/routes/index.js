@@ -1,6 +1,6 @@
 const { Router } = require('express');
 
-const getDogs = require('../handlers/getDogsHandler');
+const getDogsHandler = require('../handlers/getDogsHandler');
 const getDogsByIdHandler = require('../handlers/getDogsByIdHandler');
 const createDog = require('../handlers/createDogHandler');
 const getTemperaments = require('../handlers/getTemperamentsHandler');
@@ -20,7 +20,7 @@ const validate = (req,res,next) =>{
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
 //'TODOS LOS PERROS POR RAZA'
-router.get('/dogs', getDogs );
+router.get('/dogs', getDogsHandler );
 //'DETALLE DE UN PERRO'
 router.get('/dogs/:id', getDogsByIdHandler);
 //'NOMBRE DE PERROS RECIBIDOS POR QUERY'
