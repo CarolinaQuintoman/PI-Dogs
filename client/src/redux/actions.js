@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_DOGS, GET_DOG } from './types';
+import { GET_DOGS, GET_ALL_TEMPS} from './types';
 
 
 
@@ -14,10 +14,14 @@ export const getDogs = () =>{
     }
 };
 
-export const getDog = (id) =>{
+export const getAllTemperaments = () =>{
     return async function (dispatch) {
-        const apiData = await axios.get(`http://localhost:3001/dogs/${id}`)
-        const dog = apiData.data;
-        dispatch({type: GET_DOG, payload: dog });
+        const apiData = await axios.get("http://localhost:3001/temperaments")
+        const listAllTemperaments = apiData.data.map(temp => temp.name);
+        dispatch({
+            type: GET_ALL_TEMPS,
+             payload: listAllTemperaments
+         });
     };
 };
+

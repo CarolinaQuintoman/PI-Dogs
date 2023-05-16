@@ -1,8 +1,11 @@
-import { GET_DOGS } from "./types";
+import { GET_DOGS, GET_ALL_TEMPS } from "./types";
 
 const initialState = {
     dogs: [],
-    temperaments: []
+    temperaments: [],
+    dogDetail: {},
+    allDogs : [],
+    currentPage: 1,
 }
 
 const rootReducer = (state= initialState, action) =>{
@@ -10,7 +13,14 @@ const rootReducer = (state= initialState, action) =>{
         case GET_DOGS:
             return {
                 ...state, 
-                dogs: action.payload}
+                dogs: action.payload
+            }
+        case GET_ALL_TEMPS:
+            return {
+                ...state,
+                temperaments: action.payload,
+            }
+        
         default:
             return { ...state}
     }
