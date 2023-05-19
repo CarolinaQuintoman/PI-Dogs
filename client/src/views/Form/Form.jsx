@@ -67,12 +67,7 @@ const Form = () => {
     })
   }
 
-  // const submitHandler = (event) =>{
-  //      event.preventDefault();
-  //      axios.post("http://localhost:3001/dogs", form)//form es mi body
-  //      .then(response => alert(response))
-  //      .catch(error => alert(error))
-  //     }
+  
 
   const choiceTemperamentHandler = (event) =>{
     const propertyTemp = event.target.name;
@@ -194,10 +189,10 @@ const Form = () => {
               })
             }
           </select>
-          <h3>My dog is ...</h3>
+          {/* <h3>My dog is ...</h3>
           <ul>
             <div>{form.temperaments.map(temp => temp + ", ")}</div>
-          </ul>
+          </ul> */}
             
         </div>
         <div>
