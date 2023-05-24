@@ -1,8 +1,6 @@
 const { Dog, Temperament } = require('../db');
-// const { getAllTemperaments } = require('./getAllTemperaments');
-// const { Op } = require('sequelize');
 
-const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, weightMax, life_span, temperaments) =>{
+const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, weightMax, life_span, temperament) =>{
     
     const newDog = await Dog.create({
         id,
@@ -13,12 +11,13 @@ const createNewDog = async (id, image, name, heightMin,heightMax, weightMin, wei
         weightMin,
         weightMax,
         life_span,
-        temperaments
-    
+        temperament
     });
     
-    let temp = await Temperament.findAll({ where: { name: temperaments}})
-    await newDog.addTemperament(temp)
+    let temp = await Temperament.findAll({ where: { name: temperament}})
+    
+    await newDog.addTemperaments(temp)
+    await newDog.reload();
 
     return newDog
 }

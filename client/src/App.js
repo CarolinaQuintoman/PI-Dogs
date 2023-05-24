@@ -2,6 +2,7 @@
 import NavBar from './components/NavBar/NavBar';
 import { Landing, Home, Form, Detail } from './views';
 import { Route, useLocation } from 'react-router-dom';
+//import NotFound from './views/NotFound/NotFound';
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
         <Route path="/home" render={() => <Home />}/>  
         <Route path="/detail/:id" render={() => <Detail /> }/>
         <Route path="/create" render={() => <Form /> }/> 
+       
+        {/* <Route path="*" render={() => <NotFound/>}/> */}
       
     </div>
   );

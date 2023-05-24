@@ -1,10 +1,11 @@
 .container{
-    border: 1px solid black;
+    
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1em; 
-    background-color: aqua;
-    padding: 5px 10px 5px 20px;
+    background-color: rgba(244, 246, 246, 0);
+    padding: 15px 10px 5px 20px;
 }
+

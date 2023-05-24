@@ -2,68 +2,34 @@
     box-sizing: border-box;
 }
 
-img{
+.imgLanding{
+    display: flex;
+    align-items: center;
     width: 1200px;
     height: 620px;
     object-fit: cover;
     margin: 15px;
+    padding-left: 150px;
     
 }
-/* button{
-    display: flex;
+.imgConteiner{
+    position: relative;
+    display: inline-block;
     align-items: center;
-    padding: 20px 40px;
-    margin: 10px 50px 0 50px;
-    font-size: large;
-    font-family: 'Garamond';
-    color: rgb(245, 199, 142);
-    text-transform: uppercase;
-    margin: 20px;
-    font-weight: bolder;
-    cursor: pointer;
-    border: none;
-    transition: all 0.4s ease-in-out;
-} */
-/* .btn{
-    background-color: rgb(203, 218, 228);
-    box-shadow: 0 0 5px rgb(210, 210, 224),
-                0 0 25px rgb(203, 203, 214),
-                0 0 50px rgb(205, 205, 219);
-    border-radius: 5px;
-    display: flex;
-    justify-content: flex-start;
-} */
-/* .nav{
-    background-color: rgb(210, 217, 221);
-    text-decoration: none;
-    color: rgb(167, 128, 81);
-    cursor: pointer;
-    border: none;
-    transition: all 0.4s ease-in-out;
-} */
-/* .text1{
-    color:  rgb(121, 86, 43);
-    font-family: "Latin Modern Roman";
-    font-style: italic;
-    display: inline-flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    background-color: yellow;
-    white-space: pre-line;
-    padding: 10px 50px 30px 50px;
-    margin: 5px 5px;
+    justify-content: center;
+}
+.caption{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.144);
+    padding: 10px;
+    font-size: 24px;
+    color:rgb(167, 128, 81);
+    width: 100%;
     
-
-} */
-
-/* .text2{
-    color:  rgb(126, 90, 46);
-} */
-/* h1{
-    font-size: 36px;
-  color:rgb(126, 90, 46);
-  text-shadow: 0px 1px 0px #ccc,
-               0px 2px 0px #c9c9c9,
+    text-shadow: 0px 1px 0px #ccc,
+                0px 2px 0px #c9c9c9,
                 0px 3px 0px #bbb,
                 0px 4px 0px #b9b9b9,
                 0px 5px 0px #aaa,
@@ -74,4 +40,88 @@ img{
                 0px 5px 10px rgba(0,0,0,.25),
                 0px 10px 10px rgba(0,0,0,.2),
                 0px 20px 20px rgba(0,0,0,.15);
-} */
+    font-family:'Times New Roman', 'serif';
+    font-style: oblique;
+    padding-left: 550px;
+}
+
+.btn{
+    background-color: rgb(203, 218, 228);
+    box-shadow: 0 0 5px rgb(210, 210, 224),
+                0 0 25px rgb(203, 203, 214),
+                0 0 50px rgb(205, 205, 219);
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+.navLink{
+    background-color: rgb(142, 203, 239);
+    box-shadow: 0 0 5px rgb(159, 159, 187),
+                0 0 25px rgb(177, 177, 208),
+                0 0 50px rgb(205, 205, 219);
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(108, 62, 6);
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family:'Times New Roman', 'serif';
+    font-style: oblique;
+    font-weight: bold;
+    
+}
+.text1{
+    color:  rgb(209, 161, 104);
+    font-family: "Latin Modern Roman";
+    font-style: italic;
+    font-size: medium;
+    white-space: pre-line;
+    margin: 5px;
+    padding: 15px;
+    width: 115px;
+    height: 400px;
+    margin: 5px 5px;
+    flex: 1; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.459);
+}
+
+.text2{
+    color:  rgb(161, 125, 81);
+    font-family: "Latin Modern Roman";
+    font-style: italic;
+    font-size: medium;
+    white-space: pre-line;
+    margin: 5px;
+    padding: 15px;
+    width: 115px;
+    height: 400px;
+    margin: 5px 5px;
+    flex: 1; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.459);
+}
+

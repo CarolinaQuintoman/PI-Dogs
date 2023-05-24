@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_DOGS, GET_ALL_TEMPS, GET_DOG_DETAIL, ORDER, GET_NAME, GET_DOGS_BY_NAME} from './types';
+import { GET_DOGS, GET_ALL_TEMPS, GET_DOG_DETAIL, GET_NAME, GET_DOGS_BY_NAME, ORDER_DOG, FILTER_BY_WEIGHT, GET_FILTER_TEMP, FILTER_BY_ORIGIN } from './types';
 
 
 
@@ -39,8 +39,14 @@ export const getDogDetail = (id) =>{
 
 export const orderDogs = (order) => {
     return {
-        type: ORDER,
+        type: ORDER_DOG,
         payload: order
+    }
+}
+export const orderByWeight = (filterWeight) =>{
+    return{
+        type: FILTER_BY_WEIGHT,
+        payload: filterWeight
     }
 }
 
@@ -60,3 +66,18 @@ export const getName = (name) =>{
         payload: name
     }
 }
+
+export const filterByTemperament = (temper) =>{
+    return {
+        type: GET_FILTER_TEMP,
+        payload: temper
+    }
+}
+
+export const filterByOrigin = (origin) =>{
+    return{
+        type: FILTER_BY_ORIGIN,
+        payload: origin
+    }
+}
+

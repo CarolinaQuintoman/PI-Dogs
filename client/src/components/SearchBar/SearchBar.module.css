@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
-input{
-    size:100px;
+.inputSearch{
+    size:200px;
+    margin: 20px;
 }

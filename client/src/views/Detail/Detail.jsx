@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getDogDetail } from '../../redux/actions'
-
+import style from './Detail.module.css'
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -15,13 +15,13 @@ const Detail = () => {
   //desestructurado las propiedades "weight" y "height" del objeto "dogDetail"
   const { weight, height } = dogDetail;
   return (
-    <div>
-        <div>
-          <h1>Name:{dogDetail?.name}</h1>
+    <div className={style.detailContainer}>
+        <div className={style.imageContainer}>
+          <h1 className={style.title}>{dogDetail?.name}</h1>
           
           <img src={`https://cdn2.thedogapi.com/images/${dogDetail.reference_image_id}.jpg` } alt="img"/>
         </div>
-        <div>
+        <div className={style.infoContainer} >
           <h2>Weight: {weight && `${weight.metric} kg`}</h2>
 
            <h2>Height: {height && `${height.metric} cm`}</h2>

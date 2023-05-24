@@ -1,10 +1,14 @@
 .container {
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 }
-    button {
+.buttonPag {
         background-color: #242424;
         border: none;
         padding: 5px 10px;
@@ -14,21 +18,21 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-    }
-        svg {
-            width: 10px;
-        }
+}
+svg {
+    width: 10px;
+}
     
 
-    button[disabled] {
+.buttonPag[disabled] {
         background-color: #474747;
         cursor: no-drop;
-    }
+}
 
-    input {
+.inputPag {
         height: 30px;
         width: 50px;
         text-align: center;
         border: 1px solid #242424;
         border-radius: 3px;
-    }
+}
