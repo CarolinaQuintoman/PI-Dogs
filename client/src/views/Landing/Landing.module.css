@@ -25,7 +25,7 @@
     background-color: rgba(255, 255, 255, 0.144);
     padding: 10px;
     font-size: 24px;
-    color:rgb(167, 128, 81);
+    color: rgb(86, 79, 71);
     width: 100%;
     
     text-shadow: 0px 1px 0px #ccc,
@@ -62,7 +62,7 @@
                 0 0 50px rgb(205, 205, 219);
     border-radius: 5px;
     text-decoration: none;
-    color: rgb(108, 62, 6);
+    color:  rgb(63, 61, 59);
     cursor: pointer;
     border: none;
     font-size: 20px;
@@ -78,14 +78,14 @@
     
 }
 .text1{
-    color:  rgb(209, 161, 104);
+    color:  rgb(86, 79, 71);
     font-family: "Latin Modern Roman";
     font-style: italic;
     font-size: medium;
     white-space: pre-line;
     margin: 5px;
     padding: 15px;
-    width: 115px;
+    width: 415px;
     height: 400px;
     margin: 5px 5px;
     flex: 1; 
@@ -102,14 +102,14 @@
 }
 
 .text2{
-    color:  rgb(161, 125, 81);
+    color:   rgb(86, 79, 71);
     font-family: "Latin Modern Roman";
     font-style: italic;
     font-size: medium;
     white-space: pre-line;
     margin: 5px;
     padding: 15px;
-    width: 115px;
+    width: 415px;
     height: 400px;
     margin: 5px 5px;
     flex: 1; 

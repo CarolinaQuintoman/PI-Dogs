@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { orderDogs, orderByWeight, filterByTemperament, getAllTemperaments, filterByOrigin } from '../../redux/actions';
+import { orderDogs, orderByWeight, filterByTemperament, getAllTemperaments } from '../../redux/actions';
 
 
 const Order = () => {
-    const allDogsOrder = useSelector(state => state.allDogsOrder)
+    
     const dispatch = useDispatch();
 
     
@@ -19,66 +19,57 @@ const Order = () => {
     }
 
     const [filter, setFilter ] = useState({
-        origin: "All",
         weight: "weight",
         temperament: "All"
     })
-    const handleOrder2 = (event) =>{
+    const handleOrderWeight = (event) =>{
         dispatch(orderByWeight(event.target.value))
         setFilter({...filter,
           weight: event.target.value,
         });
       }
-    const [ temperament , setTemperament ] = useState('All')
-    const temperaments = useSelector(state => [...state.temperaments].sort(
-        function(a,b){
-            if(a<b) return -1;
-            else return 1;
-        }
-    ))
+    
+      const temperaments = useSelector((state => state.temperaments))
+      
+
     const filterByTemperHandler = (event) =>{
+        console.log(event.target.value);
         dispatch(filterByTemperament(event.target.value))
         setFilter({...filter, temperament: event.target.value})
 
-        //setTemperament(event.target.value)
     }
     useEffect(()=> {
         dispatch(getAllTemperaments())
       }, [dispatch]);
     
-    const handlerFilterByOrigin = (event) => {
-        const selectedOrigin = event.target.value;
-        dispatch(filterByOrigin(selectedOrigin));
-        setFilter({
-            origin: selectedOrigin,
-        });
-    }  
+    
 
   return (
     <div>
         <div>
         Order
-        <select onChange={orderHandler} value={order}>
+        <select onChange={orderHandler} defaultValue={"DEFAULT"}>
+            <option value="DEFAULT">All Dogs</option>
             <option value="A-Z">from A to Z</option>
             <option value="Z-A">from Z to A</option>
         </select>
         </div>
         <div >
           <div>Weigh Ordering
-            <select value = {filter.weight} onChange={event =>{handleOrder2(event)}}>
-              <option value="weight" disabled selected></option>
-              <option value="min">From lighter to heavier</option>
-              <option value="max">From heavier to lighter</option>
+            <select onChange={handleOrderWeight}>
+              <option value="weight" disabled selected>-</option>
+              <option value="Descendente">From heavier to lighter</option>
+              <option value="Ascendente">From lighter to heavier</option>
             </select>
             </div>
-          <p>-</p>
+          
         </div>
         <div>
         By temperament
-        <select onChange={event => {filterByTemperHandler(event)}} value={filter.temperament}>
+        <select onChange= {filterByTemperHandler} >
             <option value="All">All temperaments</option>
             {
-                temperaments.map((temp) => {
+                temperaments?.map((temp) => {
                     return (
                         <option value={temp} key={temp}>
                             {temp}
@@ -88,15 +79,7 @@ const Order = () => {
             }
         </select>
         </div>
-        {/* <div>
-        Order by Origin 
-        <select value={filter.origin} onChange={ handlerFilterByOrigin}>
-            <option value="All">ALL DOGS</option>
-            <option value="api">Api Dogs</option>
-            <option value="bdd">My Dogs </option>
-        </select>
-        </div>
-        <div></div> */}
+        
         
     </div>
   )

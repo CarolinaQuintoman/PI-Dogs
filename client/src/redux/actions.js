@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { GET_DOGS, GET_ALL_TEMPS, GET_DOG_DETAIL, GET_NAME, GET_DOGS_BY_NAME, ORDER_DOG, FILTER_BY_WEIGHT, GET_FILTER_TEMP, FILTER_BY_ORIGIN } from './types';
+import { GET_DOGS, GET_ALL_TEMPS, GET_DOG_DETAIL, GET_NAME, GET_DOGS_BY_NAME, ORDER_DOG, FILTER_BY_WEIGHT, GET_FILTER_TEMP, FILTER_BY_ORIGIN, GET_API_DOGS, GET_USER_CREATED_DOGS } from './types';
 
 
 
@@ -13,6 +13,28 @@ export const getDogs = () =>{
         })
     }
 };
+
+// export const getUserCreatedDogs = () => {
+//     return async function (dispatch) {
+//       const apiData = await axios.get('http://localhost:3001/dogs?created=true');
+//       const userCreatedDogs = apiData.data;
+//       dispatch({
+//         type: GET_USER_CREATED_DOGS,
+//         payload: userCreatedDogs
+//       });
+//     };
+//   };
+  
+//   export const getApiDogs = () => {
+//     return async function (dispatch) {
+//       const apiData = await axios.get('http://localhost:3001/dogs?created=false');
+//       const apiDogs = apiData.data;
+//       dispatch({
+//         type: GET_API_DOGS,
+//         payload: apiDogs
+//       });
+//     };
+//   };
 
 export const getAllTemperaments = () =>{
     return async function (dispatch) {
