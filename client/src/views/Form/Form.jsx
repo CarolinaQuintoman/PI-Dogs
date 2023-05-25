@@ -176,7 +176,7 @@ const Form = () => {
         />
       </div>
 
-      <div>
+      <div className={style.containerTemp} >
         <label>Selecciona los temperamentos:</label>
         <div className="temperament-container">
           {temperaments.map((temperament, index) => (

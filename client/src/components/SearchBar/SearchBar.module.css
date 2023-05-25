@@ -1,7 +1,37 @@
-*{
-    box-sizing: border-box;
-}
-.inputSearch{
-    size:200px;
-    margin: 20px;
-}
+.searchBar {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: rgb(154, 228, 232);
+    margin-top: 5px;
+    
+  }
+
+
+.inputSearch {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 40%;
+    color: rgb(80, 79, 79);
+    
+  }
+  
+  .searchButton {
+    background-color: #366680;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    
+  }
+  
+  .searchButton:hover {
+    background-color:  #427e9f;;
+  }
+  
