@@ -8,6 +8,4 @@ export const ORDER_DOG = "ORDER_DOG";
 export const FILTER_BY_WEIGHT = "FILTER_BY_WEIGHT";
 export const GET_FILTER_TEMP = "GET_FILTER_TEMP";
 export const  FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN";
-export const SORT_BY_ORIGIN = "SORT_BY_ORIGIN";
-export const GET_API_DOGS = "GET_API_DOGS";
-export const GET_USER_CREATED_DOGS = "GET_USER_CREATED_DOGS";
+

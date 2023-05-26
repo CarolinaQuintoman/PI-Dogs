@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       {location.pathname !== "/" && <NavBar/>}
-        <Route exact path="/" component={Landing}/>
+        <Route exact path="/" component={Landing}/> 
         <Route path="/home" render={() => <Home />}/>  
         <Route path="/detail/:id" render={() => <Detail /> }/>
         <Route path="/create" render={() => <Form /> }/> 

@@ -7,9 +7,7 @@ import {
   ORDER_DOG,
   FILTER_BY_WEIGHT,
   GET_FILTER_TEMP,
-  FILTER_BY_ORIGIN,
-  GET_USER_CREATED_DOGS,
-  GET_API_DOGS,
+  FILTER_BY_ORIGIN
 } from "./types";
 
 const initialState = {
@@ -18,8 +16,6 @@ const initialState = {
   dogDetail: {},
   allDogsOrder: [],
   allDogs: [],
-  userCreatedDogs: [],
-  apiDogs: [],
   ascendente: [],
   filterTemperament: [],
   orderWeight: []

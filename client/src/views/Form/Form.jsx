@@ -15,8 +15,8 @@ const Form = () => {
     image: "",
     heightMax: "",
     heightMin: "",
-    weightMin: "0",
-    weightMax: "0",
+    weightMin: "",
+    weightMax: "",
     life_span: "",
     temperaments: [],
   });
@@ -25,8 +25,8 @@ const Form = () => {
     image: "",
     heightMax: "",
     heightMin: "",
-    weightMin: "0",
-    weightMax: "0",
+    weightMin: "",
+    weightMax: "",
     life_span: "",
     temperaments: [],
   });
@@ -57,8 +57,8 @@ const Form = () => {
           image: "",
           heightMax: "",
           heightMin: "",
-          weightMin: "0",
-          weightMax: "0",
+          weightMin: "",
+          weightMax: "",
           life_span: "",
           temperaments: [],
         });
@@ -98,7 +98,7 @@ const Form = () => {
         <input
           type="text"
           value={form.name}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="name"
           placeholder="example: Paco Pisoni"
         />
@@ -110,7 +110,7 @@ const Form = () => {
         <input
           type="text"
           value={form.image}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="image"
           placeholder="example: https://ibb.co/6sdkMdf.jpg"
         />
@@ -122,7 +122,7 @@ const Form = () => {
         <input
           type="text"
           value={form.heightMin}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="heightMin"
           placeholder="example: 35 cm"
         />
@@ -134,7 +134,7 @@ const Form = () => {
         <input
           type="text"
           value={form.heightMax}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="heightMax"
           placeholder="example: 35 cm"
         />
@@ -158,7 +158,7 @@ const Form = () => {
         <input
           type="text"
           value={form.weightMax}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="weightMax"
           placeholder="example: 5 kg"
         />
@@ -170,7 +170,7 @@ const Form = () => {
         <input
           type="text"
           value={form.life_span}
-          onChange={(event) => changeHandler(event)}
+          onChange={ changeHandler}
           name="life_span"
           placeholder="example: 10 - 15 years"
         />

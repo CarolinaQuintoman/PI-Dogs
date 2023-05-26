@@ -8,7 +8,7 @@ const getTemperaments = require('../handlers/getTemperamentsHandler');
 // Ejemplo: const authRouter = require('./auth.js');
 
 const router = Router();
-//middlaware
+//middlaware. Validando lo que me viene por post 
 const validate = (req,res,next) =>{
     const { image,name, heightMax, heightMin, weightMin, weightMax, life_span, temperaments } = req.body;
     if(!image || !name || !heightMin || !heightMax || !weightMin || !weightMax || !life_span || !temperaments)
@@ -23,12 +23,10 @@ const validate = (req,res,next) =>{
 router.get('/dogs', getDogsHandler );
 //'DETALLE DE UN PERRO'
 router.get('/dogs/:id', getDogsByIdHandler);
-//'NOMBRE DE PERROS RECIBIDOS POR QUERY'
-//router.get('/dogs/name?=', getDogsByName);
 // 'CREAR UN PERRO'
 router.post('/dogs', validate, createDog);
 //'OBETENR LOS TEMPERAMENTOS'
 router.get('/temperaments', getTemperaments);
 
-
+ 
 module.exports = router;

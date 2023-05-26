@@ -6,7 +6,7 @@ import {
   filterByTemperament,
   getAllTemperaments,
 } from "../../redux/actions";
-import style from './Order.module.css'
+import style from "./Order.module.css";
 
 const Order = () => {
   const dispatch = useDispatch();
@@ -43,7 +43,11 @@ const Order = () => {
     <div className={style.orderContainer}>
       <div className={style.orderTitle}>
         Order
-        <select className={style.orderSelect} onChange={orderHandler} defaultValue={order}>
+        <select
+          className={style.orderSelect}
+          onChange={orderHandler}
+          defaultValue={order}
+        >
           <option value="DEFAULT">All Dogs</option>
           <option value="A-Z">from A to Z</option>
           <option value="Z-A">from Z to A</option>

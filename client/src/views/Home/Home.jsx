@@ -8,7 +8,7 @@ import style from "./Home.module.css";
 
 const Home = () => {
   const dispatch = useDispatch();
-
+  //cuando se monta mi componente que me haga un dispach de esa action getDogs
   useEffect(() => {
     dispatch(getDogs());
   }, [dispatch]);

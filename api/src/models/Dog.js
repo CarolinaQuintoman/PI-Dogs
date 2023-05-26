@@ -6,8 +6,8 @@ module.exports = (sequelize) => {
   sequelize.define('Dog', {
     id: {
       type: DataTypes.UUID,
-      primaryKey: true,
-      allowNull: false,
+      primaryKey: true, // es unico, no permite null
+      allowNull: false, 
       defaultValue: DataTypes.UUIDV4,
   },
     image:{
@@ -17,7 +17,7 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true,
+      unique: true, //que sea unico
   },
     heightMin:{
       type: DataTypes.STRING,
@@ -39,9 +39,9 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
   },
-  created: {
+  created: { 
     type: DataTypes.BOOLEAN,
     defaultValue: true,
   }
-  }, {timestamps: false, freezeTableName: true });
+  }, {timestamps: false, freezeTableName: true }); // creacion y modificacion fecha y hora.
 };

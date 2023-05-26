@@ -19,7 +19,7 @@ const Card = ({id, name, image, weight, height, life_span, temperament}) => {
           <p>Weight {weight}</p>
           <p>Height {height}</p>
           <p>LifeSpan: {life_span}</p>
-          
+          <p>temperament: {temperament}</p>
         </div>
     </div>
   )

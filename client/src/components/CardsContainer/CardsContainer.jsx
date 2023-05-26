@@ -12,7 +12,7 @@ const CardsContainer = () => {
 
    const maximo = dogs?dogs.length / perPage:0;
    if (!dogs){
-    return <div>LOADING...</div>
+    return <div>...LOADING...</div>
    }
 
    return (

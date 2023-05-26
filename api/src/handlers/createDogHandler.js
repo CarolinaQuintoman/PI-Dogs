@@ -2,12 +2,12 @@ const  createNewDog  = require('../controllers/createNewDog')
 
 const createDogHandler = async( req, res) =>{
    try {
-      const { id, image,name, heightMax, heightMin, weightMin, weightMax, life_span, temperaments } = req.body;
+      const { image,name, heightMax, heightMin, weightMin, weightMax, life_span, temperaments } = req.body;
 
       const newDog = await createNewDog(
-            id,
-            name,
+            
             image,            
+            name,
             heightMin,
             heightMax,
             weightMin, 
