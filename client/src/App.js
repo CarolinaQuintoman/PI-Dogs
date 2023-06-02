@@ -1,6 +1,6 @@
 import NavBar from './components/NavBar/NavBar';
 import { Landing, Home, Form, Detail, NotFound } from './views';
-import { Route, useLocation } from 'react-router-dom';
+import { Route, useLocation, Navigate } from 'react-router-dom';
 import axios from 'axios';
 
 axios.defaults.baseURL = "https://pi-dogs-production-2b3c.up.railway.app/";
@@ -14,8 +14,8 @@ function App() {
         <Route path="/home" render={() => <Home />}/>  
         <Route path="/detail/:id" render={() => <Detail /> }/>
         <Route path="/create" render={() => <Form /> }/> 
-        <Route path="*" render={() => <NotFound />}/>
-      
+        <Route path="/404" component={ <NotFound />}/>
+        <Route path="*" component={<Navigate to="/404" />}/>
     </>
   );
 }
