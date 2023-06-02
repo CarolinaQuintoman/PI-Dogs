@@ -25,7 +25,7 @@ const CardsContainer = () => {
                 return <Card key = {dog.id}
                 id={dog.id}
                 name={dog.name}
-                image={dog.image.url}
+                image={dog.image}
                 weight={dog.weight}
                 height={dog.height}
                 life_span={dog.life_span}

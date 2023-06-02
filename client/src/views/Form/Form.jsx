@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import validate from "./validate";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getAllTemperaments } from "../../redux/actions";
 import style from "./Form.module.css";
+import TempForm from "./TempForm";
 
 const Form = () => {
   const dispatch = useDispatch();
-  const temperaments = useSelector((state) => state.temperaments);
-  const [selectedTemperaments, setSelectedTemperaments] = useState([]);
+  // const temperaments = useSelector((state) => state.temperaments);
+  // const [selectedTemperaments, setSelectedTemperaments] = useState([]);
 
   const [form, setForm] = useState({
     name: "",
@@ -69,16 +70,16 @@ const Form = () => {
       });
   };
   
-  const handleCheckboxChange = (event) => {
-    const temperament = event.target.value;
-    if (event.target.checked) {
-      setSelectedTemperaments([...selectedTemperaments, temperament]);
-    } else {
-      setSelectedTemperaments(
-        selectedTemperaments.filter((temp) => temp !== temperament)
-      );
-    }
-  };
+  // const handleCheckboxChange = (event) => {
+  //   const temperament = event.target.value;
+  //   if (event.target.checked) {
+  //     setSelectedTemperaments([...selectedTemperaments, temperament]);
+  //   } else {
+  //     setSelectedTemperaments(
+  //       selectedTemperaments.filter((temp) => temp !== temperament)
+  //     );
+  //   }
+  // };
 
   const deleteHandler = (temp) => {
     // esta f(n) me permite borrar un temp que no quiera antes de crear el perro
@@ -175,8 +176,9 @@ const Form = () => {
           placeholder="example: 10 - 15 years"
         />
       </div>
+      <TempForm />
 
-      <div className={style.containerTemp} >
+      {/* <div className={style.containerTemp} >
         <label>Selecciona los temperamentos:</label>
         <div className="temperament-container">
           {temperaments.map((temperament, index) => (
@@ -193,8 +195,8 @@ const Form = () => {
               <label htmlFor={`temperament-${index}`}>{temperament}</label>
             </div>
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
       <div>
         <button
           type="submit"

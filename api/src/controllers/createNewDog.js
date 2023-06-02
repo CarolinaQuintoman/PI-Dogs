@@ -1,6 +1,6 @@
 const { Dog, Temperament } = require('../db');
 
-const createNewDog = async ( image, name, heightMin,heightMax, weightMin, weightMax, life_span, temperament) =>{
+const createNewDog = async ( image, name, heightMin,heightMax, weightMin, weightMax, life_span, temperaments) =>{
     
     const newDog = await Dog.create({
         
@@ -11,10 +11,10 @@ const createNewDog = async ( image, name, heightMin,heightMax, weightMin, weight
         weightMin,
         weightMax,
         life_span,
-        temperament
+        temperaments
     });
     
-    let temp = await Temperament.findAll({ where: { name: temperament}})
+    let temp = await Temperament.findAll({ where: { name: temperaments}})
     
     await newDog.addTemperaments(temp)
     await newDog.reload();

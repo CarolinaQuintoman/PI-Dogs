@@ -3,7 +3,7 @@ import style from './Card.module.css'
 import { NavLink } from 'react-router-dom'
 
 
-const Card = ({id, name, image, weight, height, life_span, temperament}) => {
+const Card = ({id, name, image, weight, height, life_span, temperaments}) => {
   const [ showDetails, setShowDetails ] = useState(false);
   const toogleDetails = () =>{
     setShowDetails(!showDetails);
@@ -19,7 +19,7 @@ const Card = ({id, name, image, weight, height, life_span, temperament}) => {
           <p>Weight {weight}</p>
           <p>Height {height}</p>
           <p>LifeSpan: {life_span}</p>
-          <p>temperament: {temperament}</p>
+          <p>temperaments: {temperaments}</p>
         </div>
     </div>
   )

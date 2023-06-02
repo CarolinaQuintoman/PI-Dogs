@@ -5,7 +5,7 @@ const cleanData = (array) =>
         const promedio = (weightMax + weightMin)/2
         return{
             id: dog.id,
-            image: dog.image,
+            image: dog.image.url,
             name: dog.name,
             weight: `Min: ${weightMin}kg Max: ${weightMax}Kg`,
             height: `Min: ${heightMin}cm Max: ${heightMax}cm`,
@@ -16,6 +16,22 @@ const cleanData = (array) =>
         }
     });
 
+const cleanDataApi = (array) =>
+array.map( (dog) =>{
+    
+    const promedio = (dog.weightMax + dog.weightMin)/2
+    return{
+        id: dog.id,
+        image: dog.image,
+        name: dog.name,
+        weight: `Min: ${dog.weightMin}kg Max: ${dog.weightMax}Kg`,
+        height: `Min: ${dog.heightMin}cm Max: ${dog.heightMax}cm`,
+        life_span: dog.life_span,
+        created: "bdd",
+        temperaments: dog.temperament,
+        promedio: promedio
+    }
+});
     
 
-module.exports = cleanData;
+module.exports = {cleanData, cleanDataApi};
