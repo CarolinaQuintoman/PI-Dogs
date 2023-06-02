@@ -49,7 +49,7 @@ const Form = () => {
     event.preventDefault();
 
     axios
-      .post("http://localhost:3001/dogs", form)
+      .post("/dogs", form)
       .then((response) => {
         console.log(response.data);
         alert("Dog successfully added");

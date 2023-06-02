@@ -1,8 +1,9 @@
 import NavBar from './components/NavBar/NavBar';
 import { Landing, Home, Form, Detail, NotFound } from './views';
 import { Route, useLocation } from 'react-router-dom';
+import axios from 'axios';
 
-
+axios.defaults.baseURL = "https://pi-dogs-production-2b3c.up.railway.app/";
 
 function App() {
   const location = useLocation()
