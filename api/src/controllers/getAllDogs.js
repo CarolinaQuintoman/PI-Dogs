@@ -10,8 +10,8 @@ const getAllDogs = async () =>{
     
     const databaseDogs = await Dog.findAll();
      console.log(databaseDogs);
-    const apiDogsRaw = (await axios.get(`${URL}?${API_KEY}`)).data;
-    
+    const apiDogsRaw = (await  axios.get(`${URL}?apiKey=${API_KEY}/dogs`)).data;
+        console.log(apiDogsRaw);
     const apiDogs = cleanData(apiDogsRaw);
     const dataDogs = cleanDataApi(databaseDogs)
     const results = [...dataDogs, ...apiDogs];

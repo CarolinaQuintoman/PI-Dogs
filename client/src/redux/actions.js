@@ -10,10 +10,11 @@ import {
   GET_FILTER_TEMP,
   FILTER_BY_ORIGIN,
 } from "./types";
-
-export const getDogs = () => {
+//
+export const getDogs =  () => {
   return async function (dispatch) {
-    const apiData = await axios.get("/dogs");
+    const apiData = await axios.get("http://localhost:3001/dogs");
+    console.log(apiData);
     const dogs = apiData.data;
     dispatch({
       type: GET_DOGS,
@@ -24,7 +25,7 @@ export const getDogs = () => {
 
 export const getAllTemperaments = () => {
   return async function (dispatch) {
-    const apiData = await axios.get("/temperaments");
+    const apiData = await axios.get("http://localhost:3001/temperaments");
     const listAllTemperaments = apiData.data.map((temp) => temp.name);
     dispatch({
       type: GET_ALL_TEMPS,
@@ -35,7 +36,7 @@ export const getAllTemperaments = () => {
 
 export const getDogDetail = (id) => {
   return async function (dispatch) {
-    const apiData = await axios.get(`/dogs/${id}`);
+    const apiData = await axios.get(`http://localhost:3001/dogs/${id}`);
 
     dispatch({
       type: GET_DOG_DETAIL,
@@ -59,7 +60,7 @@ export const orderByWeight = (filterWeight) => {
 
 export const getDogsByName = (name) => {
   return async function (dispatch) {
-    let apiData = await axios(`/dogs?name=${name}`);
+    let apiData = await axios(`http://localhost:3001/dogs?name=${name}`);
     return dispatch({
       type: GET_DOGS_BY_NAME,
       payload: apiData.data,

@@ -1,0 +1,60 @@
+
+.containerTemp {
+  /* background-color: rgb(144, 214, 214); */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center; /* Centramos el contenido del contenedor */
+  align-self: flex-start;
+  align-items: center;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  max-width: 1120px;
+  max-height: 753px;
+  left: 23%;
+    
+}
+.labelTitle {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 16px;
+  position: absolute;
+  z-index: 2;
+  padding-bottom: 1020px;
+  
+}
+
+
+.temperamentContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los temperamentos se ajusten en varias líneas */
+  justify-content: center; /* Centramos los elementos horizontalmente */
+  background-color: rgba(143, 143, 132, 0.331);
+  padding: 10px; /* Ajusta el espaciado entre los temperamentos */
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 50%;
+}
+
+
+.temp,
+.selectedTemp {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.temp {
+  background-color: rgb(254, 254, 254);
+  font-size: small;
+  color: rgb(99, 101, 101);
+}
+
+.selectedTemp {
+  background-color: rgb(236, 32, 175);
+  color: white;
+}

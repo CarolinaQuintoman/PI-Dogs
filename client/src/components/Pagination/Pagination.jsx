@@ -20,7 +20,7 @@ export const Pagination = ({page, setPage, maximo}) => {
       if (
         parseInt (event.target.value < 1) ||
         parseInt (event.target.value) > Math.ceil (maximo) ||
-        isNaN (parseInt (event.target.value))
+        isNaN (Math.ceil (event.target.value))
       ) {
         setPage (1);
         setInput (1);

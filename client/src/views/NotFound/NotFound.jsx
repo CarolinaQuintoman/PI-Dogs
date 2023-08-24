@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./NotFound.module.css";
 import imgLou from "../../assets/WhatsApp Image 2023-05-15 at 15.53.00.jpeg";
-import dogPaw from "../../assets/dog-paw-md 35.png"
+import dogPaw from "../../assets/dog-paw-md 10.png"
 
 const NotFound = () => {
   return (

@@ -1,34 +1,36 @@
 .orderContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 5em;
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: rgb(193, 244, 244);
+    background-color: #0a4253df;
   }
   
   .orderTitle {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
     font-size: 14px;
-    margin: 5px;
-    color: rgb(58, 58, 62);
+    color: rgb(244, 244, 245);
+    margin-bottom: 4px;
     padding: 2px;
-    margin-bottom: 8px;
   }
   
   .orderSelect {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 2px 16px;
+    font-size: 12px;
     border: 1px solid #f7f3f3;
     border-radius: 4px;
-    
+    height: 30px;
+    margin-top: 8px;
   }
-  
-  /* .orderSelect option {
-    font-size: 4px;
-    
+  .dogIcon {
+    width: 40px; /* Cambia este valor al tamaño deseado */
+    height: 40px; /* Cambia este valor al tamaño deseado */
+    /* Otros estilos si los tienes */
   }
+ 
   
-  .orderSelect option:first-child {
-    color: #2c2a2a;
-  } */

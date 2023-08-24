@@ -4,14 +4,10 @@
     margin: 0 auto;
     background-color: #6cc6df;
     padding: 20px;
-    background-image: url('../../assets/OQRDHB0.jpg');
+    /* background-image: url('../../assets/OQRDHB0.jpg'); */
     
   }
-  .containerTemp{
-    background-color: rgb(144, 214, 214);
-    display: block;
-    flex-direction: row;
-  }
+  
   
   .formContainer label {
     margin-bottom: 5px;
@@ -21,7 +17,7 @@
   .formContainer textarea,
   .formContainer select {
     width: 300px;
-    padding: 8px;
+    padding: 13px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -35,10 +31,13 @@
     background-color: #366680;
     color: #fff;
     border: none;
-    padding: 8px 20px;
-    margin-left: 10px;
+    padding: 15px 40px;
+    margin-left: 700px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: larger;
+    margin-top: 10px;
+
   }
   
   .formContainer button[type="submit"]:hover {
@@ -63,6 +62,12 @@
   .formContainer .checkboxContainer input[type="checkbox"] {
     margin-right: 5px;
   }
+  .containerTemp{
+    background-color: rgb(144, 214, 214);
+    display: block;
+    flex-direction: row;
+    
+  }
   
   .formContainer .checkboxContainer .temperament {
     display: flex;
@@ -84,20 +89,8 @@
     cursor: pointer;
   }
   
-  .temperament-container {
-    column-count: 3;
-    column-gap: 20px;
-    
-  }
   
-  .temperament-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  .itemsform{
+    margin-top: 13px;
   }
-  
-  .temperament-checkbox {
-    margin-right: 5px;
-  }
-
   

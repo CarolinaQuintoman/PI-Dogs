@@ -1,12 +1,14 @@
 .mainContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 42rem;
     width: auto;
     height: auto;
     background-color: rgba(0, 255, 255, 0.459);
     border-radius: 5px;
-    padding: 10px;
+    padding: 8px;
 }
 .navLink{
     
@@ -28,4 +30,13 @@
     cursor: pointer;
     
   }
+
+  
+.dogIcon {
+    width: 30px; /* Ajusta el tamaño del icono según tus preferencias */
+    height: 30px;
+    margin: 0 20px 0 15px;
+    /* margin-left: 15px; Espaciado entre el icono y los botones */
+  }
+  
   

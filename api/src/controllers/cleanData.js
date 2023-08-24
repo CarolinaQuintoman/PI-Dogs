@@ -5,7 +5,7 @@ const cleanData = (array) =>
         const promedio = (weightMax + weightMin)/2
         return{
             id: dog.id,
-            image: dog.image.url,
+            image: `https://cdn2.thedogapi.com/images/${dog.reference_image_id}.jpg`,
             name: dog.name,
             weight: `Min: ${weightMin}kg Max: ${weightMax}Kg`,
             height: `Min: ${heightMin}cm Max: ${heightMax}cm`,

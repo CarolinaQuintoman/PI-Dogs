@@ -17,16 +17,15 @@ const Detail = () => {
   return (
     <div className={style.detailContainer}>
         <div className={style.imageContainer}>
-          <h1 className={style.title}>{dogDetail?.name}</h1>
-          
           <img src={`https://cdn2.thedogapi.com/images/${dogDetail.reference_image_id}.jpg` } alt="img"/>
         </div>
         <div className={style.infoContainer} >
-          <h2>Weight: {weight && `${weight.metric} kg`}</h2>
-
-           <h2>Height: {height && `${height.metric} cm`}</h2>
-          <h2>Life Span: {dogDetail?.life_span}</h2>
-          <h2>Temperaments: {dogDetail?.temperament}</h2>
+          <h1 className={style.title}>{dogDetail?.name}</h1>
+          <h2>WEIGHT: {weight && `${weight.metric} kg`}</h2>
+          <h2>HEIGHT: {height && `${height.metric} cm`}</h2>
+          <h2>LIFE SPAN: {dogDetail?.life_span}</h2>
+          <h2>TEMPERAMENTS: {dogDetail?.temperament}</h2>
+          <h2>DESCRIPTION: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus deleniti quas harum, nam at, ex officia, nobis odio earum commodi eius? Consequuntur, accusantium? Debitis, magnam. Dignissimos laudantium aspernatur beatae autem!</h2>
         </div>
     </div>
   )

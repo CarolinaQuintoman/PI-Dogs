@@ -1,44 +1,65 @@
-.detailContainer {
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    height: 598px;
-    background-image: url('../../assets/OQRDHB0.jpg');
-  }
+ .detailContainer {
+  display: flex;
+  height: 100%;
+}
+
+.imageContainer {
+  flex: 1;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to bottom, #366680, #63c0f1);
+}
+
+.imageContainer img {
+  max-width: 100%; /* Establece el ancho máximo */
+  max-height: 100%; /* Establece la altura máxima */
+  object-fit: contain;
+  object-position: center;
   
-  .imageContainer {
-    flex: 1;
-    
-  }
+}
+
+.infoContainer {
+  flex: 1;
+  height: 655px;
+  background: linear-gradient(to bottom, #366680, #63c0f1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Trebuchet MS';
+  font-size: 10px;
+  color: #f0f0f0;
+  padding-top: 150px;
   
-  .imageContainer img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin-left: 100px;
-    padding: 20px;
-  }
+}
+
+.title {
+  position: absolute;
+  top: 2cqb;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 120px;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(245, 245, 242);
+  letter-spacing: 50px;
+  word-wrap: break-word;
+  text-align: center;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 35px; /* Espacio entre el título y el subrayado */
+  font-family: 'Raleway';
+  display: flex;
+  align-items: center;
   
-  .infoContainer {
-    flex: 1;
-    padding-left: 20px;
-    text-align: left;
-    background-color: aqua;
-    margin: 25px;
-    
-  }
+}
+
+.infoContainer h2 {
+  margin: 10px 0;
+  padding: 0 100px 0 150px;
+}  
+
   
-  .infoContainer h2 {
-    margin-bottom: 10px;
-    size:20px;
-    font-family: "Latin Modern Roman";
-    font-style: italic;
-    color:   #2b2a2a
-  }
-  .title{
-    font-family: "Latin Modern Roman";
-    font-style: italic;
-    font-size: 45px;
-    color:  #2b2a2a;
-    text-align: center;
-  }

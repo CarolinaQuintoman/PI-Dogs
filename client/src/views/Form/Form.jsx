@@ -49,7 +49,7 @@ const Form = () => {
     event.preventDefault();
 
     axios
-      .post("/dogs", form)
+      .post("http://localhost:3001/dogs", form)
       .then((response) => {
         console.log(response.data);
         alert("Dog successfully added");
@@ -94,6 +94,7 @@ const Form = () => {
 
   return (
     <form onSubmit={submitHandler} className={style.formContainer}>
+      <div className={style.itemsform}>
       <div>
         <label>Name</label>
         <input
@@ -125,7 +126,7 @@ const Form = () => {
           value={form.heightMin}
           onChange={ changeHandler}
           name="heightMin"
-          placeholder="example: 35 cm"
+          placeholder="example: 25"
         />
         {errors.heightMin && <span>{errors.heightMin}</span>}
       </div>
@@ -137,7 +138,7 @@ const Form = () => {
           value={form.heightMax}
           onChange={ changeHandler}
           name="heightMax"
-          placeholder="example: 35 cm"
+          placeholder="example: 35"
         />
         {errors.heightMax && <span>{errors.heightMax}</span>}
       </div>
@@ -149,7 +150,7 @@ const Form = () => {
           value={form.weightMin}
           onChange={changeHandler}
           name="weightMin"
-          placeholder="example: 8 kg"
+          placeholder="example: 8"
         />
         {errors.weightMin && <span>{errors.weightMin}</span>}
       </div>
@@ -161,7 +162,7 @@ const Form = () => {
           value={form.weightMax}
           onChange={ changeHandler}
           name="weightMax"
-          placeholder="example: 5 kg"
+          placeholder="example: 5"
         />
         {errors.weightMax && <span>{errors.weightMax}</span>}
       </div>
@@ -176,33 +177,15 @@ const Form = () => {
           placeholder="example: 10 - 15 years"
         />
       </div>
+      </div>
       <TempForm />
 
-      {/* <div className={style.containerTemp} >
-        <label>Selecciona los temperamentos:</label>
-        <div className="temperament-container">
-          {temperaments.map((temperament, index) => (
-            <div className="temperament-item" key={index}>
-              <input
-                className="temperament-checkbox"
-                type="checkbox"
-                id={`temperament-${index}`}
-                name="temperaments"
-                value={temperament}
-                checked={selectedTemperaments.includes(temperament)}
-                onChange={handleCheckboxChange}
-              />
-              <label htmlFor={`temperament-${index}`}>{temperament}</label>
-            </div>
-          ))}
-        </div> */}
-      {/* </div> */}
       <div>
         <button
           type="submit"
           // disabled={errors.name || errors.image || errors.weightMin || errors.weightMin || errors.height || errors.life_span || !form.temperaments.length || !form.name}
         >
-          Create my dog
+          CREATE
         </button>
         {errors.temperaments && <strong>{errors.temperaments}</strong>}
       </div>

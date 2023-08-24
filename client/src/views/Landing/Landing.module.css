@@ -1,89 +1,60 @@
-*{
-    box-sizing: border-box;
-}
-
-.imgLanding{
-    display: flex;
-    align-items: center;
-    width: 1200px;
-    height: 620px;
-    object-fit: cover;
-    margin: 15px;
-    padding-left: 150px;
-    
-}
-.imgConteiner{
-    position: relative;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
-.caption{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.144);
-    /* padding: 10px; */
-    font-size: 54px;
-    color: rgb(91, 86, 81);
-    width: 100%;
-    
-    text-shadow: 0px 1px 0px #ccc,
-                0px 2px 0px #c9c9c9,
-                0px 3px 0px #bbb,
-                0px 4px 0px #b9b9b9,
-                0px 5px 0px #aaa,
-                0px 6px 1px rgba(0,0,0,.1),
-                0px 0px 5px rgba(0,0,0,.1),
-                0px 1px 3px rgba(0,0,0,.3),
-                0px 3px 5px rgba(0,0,0,.2),
-                0px 5px 10px rgba(0,0,0,.25),
-                0px 10px 10px rgba(0,0,0,.2),
-                0px 20px 20px rgba(0,0,0,.15);
-    font-family:'Times New Roman', 'serif';
-    font-style: oblique;
-    /* padding-left: 550px; */
-    display: flex;
-    justify-content: center;
-    
-}
-
-/* .btn{
-    background-color: rgb(203, 218, 228);
-    box-shadow: 0 0 5px rgb(210, 210, 224),
-                0 0 25px rgb(30, 30, 222),
-                0 0 50px rgb(205, 205, 219);
-    border-radius: 5px;
-    display: flex;
-    justify-content: flex-start;
-    text-decoration: none;
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 } */
-.navLink{
-    /* background-color: rgb(142, 203, 239);
-    box-shadow: 0 0 5px rgb(159, 159, 187),
-                0 0 25px rgb(177, 177, 208),
-                0 0 50px rgb(205, 205, 219);
-    border-radius: 5px;
-    text-decoration: none;
-    color:  rgb(63, 61, 59);
-    cursor: pointer;
-    border: none;
-    font-size: 20px;
-    padding: 10px;
-    margin: 10px;
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(10, 10, 10);
+  }
+  
+
+
+  
+
+.imgLanding {
+    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    height: 100vh; 
+    position: relative;
+    right: 12%;   
+}
+
+  
+.caption{
+    font-family: 'Caprasimo', cursive;
+    font-size: 52px;
+    color: rgba(244, 249, 249, 0.911);
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    align-items: center;
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "Latin Modern Roman";
-    font-style: oblique;
-    font-weight: bold; */
+    justify-content: center;
+    top: 25%;
+    left: 55%;
+    right: 10%;
+   
     
-    background-color: #366680;
+}
+
+
+.getStart{
+    position: absolute;
+    top: 105%;
+    left: 96%;
+    transform: translate(-290%, -480%);
+    background-image: linear-gradient(to left, #a8f2f5, #12aab0);
     color: #fff;
     border: none;
     padding: 8px 20px;
-    margin-left: 550px;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
@@ -91,54 +62,24 @@
     justify-content: center;
     width: 220px;
     height: 50px;
-    
-    
+    font-family: 'Caprasimo';
+    font-size: 28px;
+   
 }
-.text1{
-    color:  rgb(86, 79, 71);
-    font-family: "Latin Modern Roman";
-    font-style: italic;
-    font-size: medium;
-    white-space: pre-line;
-    margin: 5px;
-    padding: 15px;
-    width: 315px;
-    height: 200px;
-    margin: 5px 5px;
-    flex: 1; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    align-items: center;
-    position: absolute;
-    top: 35%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.459);
-}
-
 .text2{
-    color:   rgb(86, 79, 71);
-    font-family: "Latin Modern Roman";
+    color:   rgb(243, 238, 238);
+    font-family: 'Raleway', sans-serif;
     font-style: italic;
-    font-size: medium;
+    font-size: 21px;
     white-space: pre-line;
-    margin: 5px;
-    padding: 15px;
-    width: 315px;
-    height: 200px;
-    margin: 5px 5px;
-    flex: 1; 
+    width: 415px;
+    height: 180px;
+    transform: translate(-10%, -265%);
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 60%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.459);
+    top: 140%;
+    right: 10%;
+    
 }
 

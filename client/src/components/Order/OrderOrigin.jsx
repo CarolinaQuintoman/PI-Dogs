@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { filterByOrigin } from "../../redux/actions";
-import style from './Order.module.css'
+import style from './OrderOrigin.module.css'
 
 export default function DogList() {
   const dispatch = useDispatch();
@@ -15,10 +15,10 @@ export default function DogList() {
   };
 
   return (
-    <div className={style.orderContainer}>
-      <div className={style.orderTitle}>
-        Origin
-        <select className={style.orderSelect} value={filter} onChange={handleFilterChange}>
+    <div className={style.originContainer}>
+      <div className={style.originTitle}>
+        <p className={style.ordering}>Origin</p>
+        <select className={style.originSelect} value={filter} onChange={handleFilterChange}>
           <option value="All">All dogs</option>
           <option value="api">Api dogs</option>
           <option value="bdd">My dogs</option>

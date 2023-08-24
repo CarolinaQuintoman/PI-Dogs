@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import style from './CardsContainer.module.css';
 import { useSelector } from 'react-redux';
 import { Pagination } from '../Pagination/Pagination';
+import Loader from '../Loader/Loader';
 
 const CardsContainer = () => {
   const dogs = useSelector(state => state.dogs) //mira al estado global
@@ -10,10 +11,18 @@ const CardsContainer = () => {
   const [ page, setPage ] = useState(1)
    const [ perPage, setPerPage ] = useState(8)
 
-   const maximo = dogs?dogs.length / perPage:0;
+   const maximo = dogs?Math.ceil(dogs.length / perPage) : 1;
    if (!dogs){
-    return <div>...LOADING...</div>
+    return (
+    <div>
+      <Loader className={style.loader}/>
+    </div>
+    )
    }
+  //  const handlePerPageChange = (event) => {
+  //   const newPerPage = parseInt(event.target.value);
+  //   setPerPage(newPerPage);
+  // };
 
    return (
     <div className={style.container}>
@@ -34,10 +43,7 @@ const CardsContainer = () => {
                 />
             })
         }
-        <div>
         
-        
-      </div>
       <Pagination page={page} setPage={setPage} maximo={maximo}/>
       
     </div>

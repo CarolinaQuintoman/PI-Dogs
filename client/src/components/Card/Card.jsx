@@ -3,7 +3,7 @@ import style from './Card.module.css'
 import { NavLink } from 'react-router-dom'
 
 
-const Card = ({id, name, image, weight, height, life_span, temperaments}) => {
+const Card = ({id, name, image, weight, height, life_span}) => {
   const [ showDetails, setShowDetails ] = useState(false);
   const toogleDetails = () =>{
     setShowDetails(!showDetails);
@@ -11,16 +11,16 @@ const Card = ({id, name, image, weight, height, life_span, temperaments}) => {
   return (
     <div className={`${style.card} ${showDetails ? style.showDetails : ''}`} onMouseEnter={toogleDetails} onMouseLeave={toogleDetails}>
         
-        <p className={style.title}>{name}</p>
         <NavLink to={`/detail/${id}`}>
         <img src={image} alt={name} className={style.imgCard}/>
         </NavLink>
-        <div className={style.details}>
+        <NavLink to={`/detail/${id}`} className={style.details}>
+          <p className={style.titleDetail}>{name}</p>
           <p>Weight {weight}</p>
           <p>Height {height}</p>
           <p>LifeSpan: {life_span}</p>
-          <p>temperaments: {temperaments}</p>
-        </div>
+        
+        </NavLink>
     </div>
   )
 }

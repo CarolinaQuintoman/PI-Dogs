@@ -7,7 +7,8 @@ import {
   getAllTemperaments,
 } from "../../redux/actions";
 import style from "./Order.module.css";
-
+import OrderOrigin from './OrderOrigin'
+import iconDog from '../../assets/labrador_dog_animal_15967.png'
 const Order = () => {
   const dispatch = useDispatch();
 
@@ -42,7 +43,9 @@ const Order = () => {
   return (
     <div className={style.orderContainer}>
       <div className={style.orderTitle}>
-        Order
+        <p className={style.ordering}>Order</p>
+        
+        
         <select
           className={style.orderSelect}
           onChange={orderHandler}
@@ -55,9 +58,9 @@ const Order = () => {
       </div>
       <div>
         <div className={style.orderTitle}>
-          Weight Ordering
-          <select className={style.orderSelect} onChange={handleOrderWeight}>
-            <option value="weight" disabled selected>
+          <p className={style.ordering}>Weight Ordering</p>
+          <select className={style.orderSelect} onChange={handleOrderWeight} defaultValue={filter.weight}>
+            <option value="weight" disabled>
               All Weight
             </option>
             <option value="Descendente">From heavier to lighter</option>
@@ -66,7 +69,7 @@ const Order = () => {
         </div>
       </div>
       <div className={style.orderTitle}>
-        By temperament
+        <p className={style.ordering}>By temperament</p>
         <select className={style.orderSelect} onChange={filterByTemperHandler}>
           <option value="All">All temperaments</option>
           {temperaments?.map((temp) => {
@@ -78,6 +81,8 @@ const Order = () => {
           })}
         </select>
       </div>
+      <div><OrderOrigin/></div>
+      <img src={iconDog} alt="Dog Icon" className={style.dogIcon} />
     </div>
   );
 };
